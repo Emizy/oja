@@ -79,8 +79,8 @@ WSGI_APPLICATION = 'oja.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'oja',
-        'USER': 'Madonna$oja',
+        'NAME': 'Madonna$oja',
+        'USER': 'Madonna',
         'PASSWORD': 'ayo2012',
     }
 }

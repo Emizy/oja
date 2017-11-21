@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be319153-ff38-424e-bed7-8b1ba06195d7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/preferred-vcs.xml" afterPath="$PROJECT_DIR$/.idea/preferred-vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oja/settings.py" afterPath="$PROJECT_DIR$/oja/settings.py" />
     </list>
@@ -22,12 +21,12 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/oja/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="80" column="43" lean-forward="false" selection-start-line="80" selection-start-column="43" selection-end-line="80" selection-end-column="43" />
+            <state relative-caret-position="255">
+              <caret line="82" column="24" lean-forward="false" selection-start-line="82" selection-start-column="24" selection-end-line="82" selection-end-column="24" />
               <folding>
                 <element signature="e#1532#2100#0" expanded="false" />
                 <element signature="e#1538#2097#0" expanded="false" />
-                <marker date="1511277360863" expanded="true" signature="2478:2485" ph="..." />
+                <marker date="1511277501171" expanded="true" signature="2482:2489" ph="..." />
               </folding>
             </state>
           </provider>
@@ -74,8 +73,8 @@
       <file leaf-file-name="ReleaseNotes.html" pinned="false" current-in-tab="false">
         <entry file="file://C:/Program Files/Git/ReleaseNotes.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="306">
+              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -276,7 +275,14 @@
       <option name="project" value="LOCAL" />
       <updated>1511277201928</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="gjh">
+      <created>1511277378213</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1511277378213</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -482,7 +488,7 @@
           <folding>
             <element signature="e#1532#2100#0" expanded="false" />
             <element signature="e#1538#2097#0" expanded="false" />
-            <marker date="1511277360863" expanded="true" signature="2478:2485" ph="..." />
+            <marker date="1511277501171" expanded="true" signature="2482:2489" ph="..." />
           </folding>
         </state>
       </provider>
@@ -504,7 +510,7 @@
           <folding>
             <element signature="e#1532#2100#0" expanded="false" />
             <element signature="e#1538#2097#0" expanded="false" />
-            <marker date="1511277360863" expanded="true" signature="2478:2485" ph="..." />
+            <marker date="1511277501171" expanded="true" signature="2482:2489" ph="..." />
           </folding>
         </state>
       </provider>
@@ -734,20 +740,20 @@
     </entry>
     <entry file="file://C:/Program Files/Git/ReleaseNotes.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="306">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/oja/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="80" column="43" lean-forward="false" selection-start-line="80" selection-start-column="43" selection-end-line="80" selection-end-column="43" />
+        <state relative-caret-position="255">
+          <caret line="82" column="24" lean-forward="false" selection-start-line="82" selection-start-column="24" selection-end-line="82" selection-end-column="24" />
           <folding>
             <element signature="e#1532#2100#0" expanded="false" />
             <element signature="e#1538#2097#0" expanded="false" />
-            <marker date="1511277360863" expanded="true" signature="2478:2485" ph="..." />
+            <marker date="1511277501171" expanded="true" signature="2482:2489" ph="..." />
           </folding>
         </state>
       </provider>
