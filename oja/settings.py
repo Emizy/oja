@@ -16,7 +16,7 @@ SECRET_KEY = 'v7%(x53gabcat&^sjklz*26&9qo67e9usv=(bo+$z-nqzhy29!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 from .email_info import *
 #for googgle gmail
 EMAIL_USE_TLS = EMAIL_USE_TLS
