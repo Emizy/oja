@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="be319153-ff38-424e-bed7-8b1ba06195d7" name="Default" comment="" />
+    <list default="true" id="be319153-ff38-424e-bed7-8b1ba06195d7" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/preferred-vcs.xml" afterPath="$PROJECT_DIR$/.idea/preferred-vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oja/settings.py" afterPath="$PROJECT_DIR$/oja/settings.py" />
+    </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,24 +19,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/oja/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="884">
-              <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+            <state relative-caret-position="221">
+              <caret line="80" column="43" lean-forward="false" selection-start-line="80" selection-start-column="43" selection-end-line="80" selection-end-column="43" />
               <folding>
                 <element signature="e#1532#2100#0" expanded="false" />
                 <element signature="e#1538#2097#0" expanded="false" />
-                <marker date="1510845960000" expanded="true" signature="2464:2471" ph="..." />
-                <marker date="1510845960000" expanded="true" signature="2464:2473" ph="..." />
-                <marker date="1510845960000" expanded="true" signature="2477:2578" ph="..." />
-                <marker date="1510845960000" expanded="true" signature="2608:3002" ph="..." />
-                <marker date="1510845960000" expanded="true" signature="2614:2711" ph="..." />
-                <marker date="1510845960000" expanded="true" signature="2719:2806" ph="..." />
-                <marker date="1510845960000" expanded="true" signature="2814:2902" ph="..." />
-                <marker date="1510845960000" expanded="true" signature="2910:2999" ph="..." />
-                <marker date="1510845960000" expanded="true" signature="3006:3082" ph="..." />
-                <marker date="1510845960000" expanded="true" signature="3178:3280" ph="..." />
+                <marker date="1511277360863" expanded="true" signature="2478:2485" ph="..." />
               </folding>
             </state>
           </provider>
@@ -69,14 +64,14 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/store/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
+            <state relative-caret-position="6256">
               <caret line="375" column="13" lean-forward="false" selection-start-line="375" selection-start-column="13" selection-end-line="375" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReleaseNotes.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ReleaseNotes.html" pinned="false" current-in-tab="false">
         <entry file="file://C:/Program Files/Git/ReleaseNotes.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
@@ -89,7 +84,7 @@
       <file leaf-file-name="Adminlog.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/Adminlog.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
+            <state relative-caret-position="425">
               <caret line="25" column="11" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="25" selection-end-column="11" />
               <folding />
             </state>
@@ -99,7 +94,7 @@
       <file leaf-file-name="emoh.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/emoh.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8840">
+            <state relative-caret-position="9146">
               <caret line="538" column="0" lean-forward="false" selection-start-line="538" selection-start-column="0" selection-end-line="538" selection-end-column="0" />
               <folding />
             </state>
@@ -127,6 +122,9 @@
       <replace>index</replace>
     </replaceStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -150,11 +148,11 @@
         <option value="$PROJECT_DIR$/templates/show_order.html" />
         <option value="$PROJECT_DIR$/static/js/script.js" />
         <option value="$PROJECT_DIR$/store/admin.py" />
-        <option value="$PROJECT_DIR$/oja/settings.py" />
         <option value="$PROJECT_DIR$/templates/emoh.html" />
         <option value="$PROJECT_DIR$/templates/Adminlog.html" />
         <option value="$PROJECT_DIR$/templates/ms.html" />
         <option value="$PROJECT_DIR$/store/views.py" />
+        <option value="$PROJECT_DIR$/oja/settings.py" />
       </list>
     </option>
   </component>
@@ -193,6 +191,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -209,7 +208,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -271,20 +269,29 @@
       <option name="presentableId" value="Default" />
       <updated>1509139218853</updated>
     </task>
+    <task id="LOCAL-00001" summary="gjh">
+      <created>1511277201928</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1511277201928</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Debug Logs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5030349" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32820514" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26022914" sideWeight="0.4969651" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29425114" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26022914" sideWeight="0.4969651" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2987897" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -329,6 +336,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="gjh" />
+    <option name="LAST_COMMIT_MESSAGE" value="gjh" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -471,16 +482,7 @@
           <folding>
             <element signature="e#1532#2100#0" expanded="false" />
             <element signature="e#1538#2097#0" expanded="false" />
-            <marker date="1510845960000" expanded="true" signature="2464:2471" ph="..." />
-            <marker date="1510845960000" expanded="true" signature="2464:2473" ph="..." />
-            <marker date="1510845960000" expanded="true" signature="2477:2578" ph="..." />
-            <marker date="1510845960000" expanded="true" signature="2608:3002" ph="..." />
-            <marker date="1510845960000" expanded="true" signature="2614:2711" ph="..." />
-            <marker date="1510845960000" expanded="true" signature="2719:2806" ph="..." />
-            <marker date="1510845960000" expanded="true" signature="2814:2902" ph="..." />
-            <marker date="1510845960000" expanded="true" signature="2910:2999" ph="..." />
-            <marker date="1510845960000" expanded="true" signature="3006:3082" ph="..." />
-            <marker date="1510845960000" expanded="true" signature="3178:3280" ph="..." />
+            <marker date="1511277360863" expanded="true" signature="2478:2485" ph="..." />
           </folding>
         </state>
       </provider>
@@ -502,16 +504,7 @@
           <folding>
             <element signature="e#1532#2100#0" expanded="false" />
             <element signature="e#1538#2097#0" expanded="false" />
-            <marker date="1510845960000" expanded="true" signature="2464:2471" ph="..." />
-            <marker date="1510845960000" expanded="true" signature="2464:2473" ph="..." />
-            <marker date="1510845960000" expanded="true" signature="2477:2578" ph="..." />
-            <marker date="1510845960000" expanded="true" signature="2608:3002" ph="..." />
-            <marker date="1510845960000" expanded="true" signature="2614:2711" ph="..." />
-            <marker date="1510845960000" expanded="true" signature="2719:2806" ph="..." />
-            <marker date="1510845960000" expanded="true" signature="2814:2902" ph="..." />
-            <marker date="1510845960000" expanded="true" signature="2910:2999" ph="..." />
-            <marker date="1510845960000" expanded="true" signature="3006:3082" ph="..." />
-            <marker date="1510845960000" expanded="true" signature="3178:3280" ph="..." />
+            <marker date="1511277360863" expanded="true" signature="2478:2485" ph="..." />
           </folding>
         </state>
       </provider>
@@ -670,27 +663,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/oja/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-          <folding>
-            <element signature="e#1532#2100#0" expanded="false" />
-            <element signature="e#1538#2097#0" expanded="false" />
-            <marker date="1510845960000" expanded="true" signature="2464:2471" ph="..." />
-            <marker date="1510845960000" expanded="true" signature="2464:2473" ph="..." />
-            <marker date="1510845960000" expanded="true" signature="2477:2578" ph="..." />
-            <marker date="1510845960000" expanded="true" signature="2608:3002" ph="..." />
-            <marker date="1510845960000" expanded="true" signature="2614:2711" ph="..." />
-            <marker date="1510845960000" expanded="true" signature="2719:2806" ph="..." />
-            <marker date="1510845960000" expanded="true" signature="2814:2902" ph="..." />
-            <marker date="1510845960000" expanded="true" signature="2910:2999" ph="..." />
-            <marker date="1510845960000" expanded="true" signature="3006:3082" ph="..." />
-            <marker date="1510845960000" expanded="true" signature="3178:3280" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/oja/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -724,7 +696,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/Adminlog.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="425">
           <caret line="25" column="11" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="25" selection-end-column="11" />
           <folding />
         </state>
@@ -732,7 +704,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/emoh.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8840">
+        <state relative-caret-position="9146">
           <caret line="538" column="0" lean-forward="false" selection-start-line="538" selection-start-column="0" selection-end-line="538" selection-end-column="0" />
           <folding />
         </state>
@@ -754,7 +726,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/store/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
+        <state relative-caret-position="6256">
           <caret line="375" column="13" lean-forward="false" selection-start-line="375" selection-start-column="13" selection-end-line="375" selection-end-column="13" />
           <folding />
         </state>
@@ -765,6 +737,18 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oja/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="80" column="43" lean-forward="false" selection-start-line="80" selection-start-column="43" selection-end-line="80" selection-end-column="43" />
+          <folding>
+            <element signature="e#1532#2100#0" expanded="false" />
+            <element signature="e#1538#2097#0" expanded="false" />
+            <marker date="1511277360863" expanded="true" signature="2478:2485" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
