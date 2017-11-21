@@ -1,0 +1,196 @@
+{% extends 'mastertemplate.html' %}
+{% load static %}
+{% block head %}
+    <title> FoodStore :: Home </title>
+{% endblock %}
+{% block content %}
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" style="padding-top: 0px;margin-top: 0px;">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <a href="#"> <img class="first-slide" src="{% static 'images/ba.jpg' %}" alt="First slide"></a>
+
+            </div>
+            <div class="item">
+                <a href="#"> <img class="second-slide " src="{% static 'images/ba1.jpg' %}" alt="Second slide"></a>
+
+            </div>
+            <div class="item">
+                <a href="#"><img class="third-slide " src="{% static 'images/ba2.jpg' %}" alt="Third slide"></a>
+
+            </div>
+        </div>
+
+    </div><!-- /.carousel -->
+
+    <hr>
+    <style>
+        .NAVIGATE {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            width: 200%;
+            height: 10%;
+            border: 2px solid lightgrey;
+            border-radius: 8px;
+        }
+    </style>
+    <div class="container">
+    <h2>Quick Links</h2>
+    <div class="row">
+        <div class="col-md-5 offset-1">
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle NAVIGATE" id="menu1" type="button"
+                        data-toggle="dropdown" style="background-color: white; color:black"> Links
+                    <span class="caret"></span></button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="/shop/provisions/">Provisions</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="/shop/snacks/">Snacks | Drinks</a>
+                    </li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="/shop/cooked_food/">Cooked Food</a>
+                    </li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="/shop/raw_food/">Raw Food</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="/shop/soup_ingredient/">Soup
+                        Ingredient</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="/wear/Men/">Men Wears</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="/wear/Women/">Ladies Wear</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="/wear/Children/">Children</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+    <br>
+    <br>
+    <!-- lastest goods-->
+    <style>
+        .offer {
+            position: absolute;
+            right: 15%;
+            border: 2px solid red;
+            border-radius: 100px 0 0 100px;
+            padding: 1px;
+            top: 0%;
+            margin-top: 5px;
+            z-index: 498;
+        }
+
+        .offer > p {
+            background: red;
+            border-radius: 120px 0px 0px 120px;
+            text-align: center;
+            line-height: 0em !important;
+            font-size: 1em !important;
+            padding: 7px;
+            color: white;
+        }
+    </style>
+
+    <!-- Start of Food -->
+    {% if sql1 %}
+        <div class="container w3-border" style="margin-bottom: 2%;">
+            <h3 style="right: 100%; padding-bottom: 1%; color: red;">Food Store </h3>
+            <div class="row">
+                {% for i in sql1 %}
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div class="thumbnail">
+                                    <img src="{{ i.image.url }}" alt="pics"
+                                         class="img-responsive img-hover" style="height: 150px;width: 200px;">
+                                </div>
+                                <div class="row">
+                                    <h5 id="t" style="width: 110px;margin-left: 20px;">{{ i.product_name }} </h5>
+                                    <h6 id="t" style="width: 110px;margin-left: 20px;">{{ i.supplier }}</h6>
+                                </div>
+                                <h5 id="t">#{{ i.price }} </h5>
+                                <div class="row">
+                                    <div>
+                                        <div id="{{ i.id }}_csrf_holder">
+                                            {% csrf_token %}
+                                        </div>
+                                        <input id="{{ i.id }}_quantity" type="text" placeholder="QTY" name="Qty"
+                                               style="width: 110px;margin-left: 20px;"
+                                               required>
+                                        <script>
+                                            var div = document.getElementById("{{ i.id }}_csrf_holder");
+                                            var csrf = div.getElementsByTagName('input')[0].value;
+                                        </script>
+                                        <button id="{{ i.id }}" type="button" class="btn btn-circle w3-btn"
+                                                style="background-color: orange; color: black;"
+                                                onclick="add_to_cart(this.id, csrf, 'provision');">
+                                            <i class="glyphicon glyphicon-shopping-cart" style="color: white;"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+    <!--end of Food-->
+
+    <!--Start of Wears-->
+    {% if wear %}
+        <div class="container w3-border" style="margin-bottom: 2%;">
+            <h3 style="right: 100%; padding-bottom: 1%; color: red;"> Wears </h3>
+            <div class="row">
+                {% for i in wear %}
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                {#                                <div class="offer"><p><span>New</span></p></div>#}
+                                <div class="thumbnail">
+                                    <img src="{{ i.image.url }}" alt="pics"
+                                         class="img-responsive img-hover" style="height: 150px;width: 200px;">
+                                </div>
+                                <div class="row">
+                                    <h5 id="t" style="width: 110px;margin-left: 20px;">{{ i.product_name }} </h5>
+                                    <h6 id="t" style="width: 110px;margin-left: 20px;">{{ i.supplier }}</h6>
+                                </div>
+                                <h5 id="t">#{{ i.price }} </h5>
+                                <div class="row">
+                                    <div>
+                                        <div id="{{ i.id }}_csrf_holder">
+                                            {% csrf_token %}
+                                        </div>
+                                        <input id="{{ i.id }}_quantity" type="text" placeholder="QTY" name="Qty"
+                                               style="width: 110px;margin-left: 20px;"
+                                               required>
+                                        <script>
+                                            var div = document.getElementById("{{ i.id }}_csrf_holder");
+                                            var csrf = div.getElementsByTagName('input')[0].value;
+                                        </script>
+                                        <button id="{{ i.id }}" type="button" class="btn btn-circle w3-btn"
+                                                style="background-color: orange; color: black;"
+                                                onclick="add_to_cart(this.id, csrf, 'provision');">
+                                            <i class="glyphicon glyphicon-shopping-cart" style="color: white;"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+    <!--end of Wears-->
+
+
+
+
+
+{% endblock %}
+
