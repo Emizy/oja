@@ -131,3 +131,6 @@ TEMPLATE_DIRS = (os.path.join(BASE_DIR,  'templates'),)
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 MEDIA_URL = '/media/'
+STATIC_ROOT = "/home/Madonna/oja/static"
+# or, eg,
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
