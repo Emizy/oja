@@ -78,10 +78,10 @@ WSGI_APPLICATION = 'oja.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'Madonna.mysql.pythonanywhere-services.com',
         'NAME': 'oja',
-        'USER': 'root',
-        'PASSWORD': '',
+        'USER': 'Madonna$oja',
+        'PASSWORD': 'ayo2012',
     }
 }
 
