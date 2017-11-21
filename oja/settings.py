@@ -82,6 +82,7 @@ DATABASES = {
         'NAME': 'Madonna$oja',
         'USER': 'Madonna',
         'PASSWORD': 'ayo2012',
+        'HOST': 'Madonna.mysql.pythonanywhere-services.com'
     }
 }
 

@@ -21,12 +21,12 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/oja/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="82" column="24" lean-forward="false" selection-start-line="82" selection-start-column="24" selection-end-line="82" selection-end-column="24" />
+            <state relative-caret-position="289">
+              <caret line="84" column="58" lean-forward="false" selection-start-line="84" selection-start-column="58" selection-end-line="84" selection-end-column="58" />
               <folding>
                 <element signature="e#1532#2100#0" expanded="false" />
                 <element signature="e#1538#2097#0" expanded="false" />
-                <marker date="1511277501171" expanded="true" signature="2482:2489" ph="..." />
+                <marker date="1511277710889" expanded="true" signature="2482:2549" ph="..." />
               </folding>
             </state>
           </provider>
@@ -282,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1511277378213</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="gjh">
+      <created>1511277512190</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1511277512190</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -488,7 +495,7 @@
           <folding>
             <element signature="e#1532#2100#0" expanded="false" />
             <element signature="e#1538#2097#0" expanded="false" />
-            <marker date="1511277501171" expanded="true" signature="2482:2489" ph="..." />
+            <marker date="1511277710889" expanded="true" signature="2482:2549" ph="..." />
           </folding>
         </state>
       </provider>
@@ -510,7 +517,7 @@
           <folding>
             <element signature="e#1532#2100#0" expanded="false" />
             <element signature="e#1538#2097#0" expanded="false" />
-            <marker date="1511277501171" expanded="true" signature="2482:2489" ph="..." />
+            <marker date="1511277710889" expanded="true" signature="2482:2549" ph="..." />
           </folding>
         </state>
       </provider>
@@ -748,12 +755,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/oja/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="82" column="24" lean-forward="false" selection-start-line="82" selection-start-column="24" selection-end-line="82" selection-end-column="24" />
+        <state relative-caret-position="289">
+          <caret line="84" column="58" lean-forward="false" selection-start-line="84" selection-start-column="58" selection-end-line="84" selection-end-column="58" />
           <folding>
             <element signature="e#1532#2100#0" expanded="false" />
             <element signature="e#1538#2097#0" expanded="false" />
-            <marker date="1511277501171" expanded="true" signature="2482:2489" ph="..." />
+            <marker date="1511277710889" expanded="true" signature="2482:2549" ph="..." />
           </folding>
         </state>
       </provider>
