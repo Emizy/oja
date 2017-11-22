@@ -249,15 +249,15 @@ top: 0; right: 0">{{ request.session.cart|length }}</span></i>
         <div class="col-md-4 footer-grid">
             <h3>Social Media</h3>
             <ul>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="register.html">Register</a></li>
-                <li><a href="wishlist.html">Wishlist</a></li>
+                <li><a href="#">Facebok</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
 
             </ul>
         </div>
         <div class="footer-bottom">
             <div class="copy-right">
-                <p> &copy; 2017 FoodStore. All Rights Reserved | Design by <a href=#">
+                <p> &copy; 2017 Oja. All Rights Reserved | Design by <a href=#">
                     EMIZY</a></p>
             </div>
         </div>
@@ -277,26 +277,25 @@ top: 0; right: 0">{{ request.session.cart|length }}</span></i>
                 <div class="modal-w3lstext">
                     <div class="row">
                         <div class="colmd-12 col-sm-12">
-                            <h2 style="color:red;"><span class="glyphicon glyphicon-modal-window"></span> How Its Works
-                            </h2>
-                            <p style="font-size: large;"><span class="badge badge-success">1</span> Visit
-                                www.food4all.com </p>
-                            <p style="font-size: large;"><span class="badge badge-primary">2</span> Register in other to
-                                gain access to Orderr for your favorite meal</p>
-                            <p style="font-size: large;"><span class="badge badge-primary">3</span> Login to your
-                                account to place your Order and its will e deliver within a short period </p>
-                            <br>
+                            {#                            <h2 style="color:red;"><span class="glyphicon glyphicon-modal-window"></span> How Its Works#}
+                            {#                            </h2>#}
+                            {#                            <p style="font-size: large;"><span class="badge badge-success">1</span> Visit#}
+                            {#                                www.oja.com </p>#}
+                            {#                            <p style="font-size: large;"><span class="badge badge-primary">2</span> Enter the quantity of Products you want to buy.</p>#}
+                            {#                            <p style="font-size: large;"><span class="badge badge-primary">3</span> Click Add to Cart</p>#}
+                            {#                            <br>#}
                             <h2 style="color:red;"><span class="glyphicon glyphicon-cutlery"></span> How To Order </h2>
-                            <p style="font-size: large;"><span class="badge badge-success">1</span> Select your location
-                                and the category of your goods </p>
-                            <p style="font-size: large;"><span class="badge badge-success">2</span> Click continue to
-                                proceed to the Shopping page </p>
-                            <p style="font-size: large;"><span class="badge badge-success">3</span> Add your favorite
-                                Foods / Snacks to the cart </p>
-                            <p style="font-size: large;"><span class="badge badge-success">4</span> Click the floating
-                                cart to check-outs </p>
-                            <p style="font-size: large;"><span class="badge badge-success">5</span> Enter your bank
-                                details on the payment portal </p>
+                            <p style="font-size: large;"><span class="badge badge-success">1</span> Enter the quantity
+                                of Products you want to buy. </p>
+                            <p style="font-size: large;"><span class="badge badge-success">2</span> Click the add to
+                                cart button to add to cart. </p>
+                            <p style="font-size: large;"><span class="badge badge-success">3</span> Click the floating
+                                cart to check your ordered Goods and Proceed to Check-outs </p>
+                            <p style="font-size: large;"><span class="badge badge-success">4</span> Filled in your
+                                presonal
+                                details for delivery </p>
+                            <p style="font-size: large;"><span class="badge badge-success">5</span> Click the pay button
+                                to make your payment </p>
                             <p style="font-size: large;"><span class="badge badge-success">6</span> Then relax you will
                                 recieve a call from us for your package </p>
                             <p style="font-size: large;"><span class="badge badge-success">7</span> All delievery
@@ -325,7 +324,8 @@ top: 0; right: 0">{{ request.session.cart|length }}</span></i>
                         {% csrf_token %}
                         <div class="form-group">
                             <label for="name">Subject</label>
-                            <input type="text" class="form-control" name="subject" placeholder="Enter your complain subject">
+                            <input type="text" class="form-control" name="subject"
+                                   placeholder="Enter your complain subject">
                         </div>
                         <div class="form-group">
                             <label for="Email">Email </label>
@@ -360,7 +360,7 @@ top: 0; right: 0">{{ request.session.cart|length }}</span></i>
             <div class="modal-body modal-spa">
                 <img src="{% static 'images/g2.jpg' %}" class="img-responsive" alt=""/>
                 <div class="modal-w3lstext">
-                    <h4>Blanditiis deleniti</h4>
+                    <h4></h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum iaculis enim, non convallis
                         felis mattis at. Donec fringilla lacus eu pretium rutrum. Cras aliquet congue ullamcorper. Etiam
                         mattis eros eu ullamcorper volutpat. Proin ut dui a urna efficitur varius. uisque molestie
