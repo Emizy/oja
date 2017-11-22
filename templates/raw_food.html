@@ -8,11 +8,11 @@
 {% block content %}
 
     <!--end of nav-->
-{#    <div class="container" style="padding-top: 2%;">#}
-{#        <div class="well well-sm raw" style=" background-color: orange;color: white;">#}
-{#            <h4>RAW FOOD PAGE</h4>#}
-{#        </div>#}
-{#    </div>#}
+    {#    <div class="container" style="padding-top: 2%;">#}
+    {#        <div class="well well-sm raw" style=" background-color: orange;color: white;">#}
+    {#            <h4>RAW FOOD PAGE</h4>#}
+    {#        </div>#}
+    {#    </div>#}
     {% if msg %}
         <script>
             alert('No stock available');
@@ -29,7 +29,10 @@
                                 <img src="{{ i.image.url }}" alt="pics"
                                      class="img-responsive img-hover" style="height: 150px;width: 200px;">
                             </div>
-                            <h5 id="t">{{ i.product_name }} </h5>
+                            <div class="row">
+                                <h5 id="t" style="width: 110px;margin-left: 20px;">{{ i.product_name }} </h5>
+                                <h6 id="t" style="width: 110px;margin-left: 20px;">{{ i.supplier }}</h6>
+                            </div>
                             <h5 id="t">#{{ i.price }} </h5>
                             <div class="row">
                                 <div>
