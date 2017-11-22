@@ -3,14 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="be319153-ff38-424e-bed7-8b1ba06195d7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Children.html" afterPath="$PROJECT_DIR$/templates/Children.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Men.html" afterPath="$PROJECT_DIR$/templates/Men.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Women.html" afterPath="$PROJECT_DIR$/templates/Women.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/cooked_food.html" afterPath="$PROJECT_DIR$/templates/cooked_food.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/provisions.html" afterPath="$PROJECT_DIR$/templates/provisions.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/raw_food.html" afterPath="$PROJECT_DIR$/templates/raw_food.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/snacks.html" afterPath="$PROJECT_DIR$/templates/snacks.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/soup_ingredient.html" afterPath="$PROJECT_DIR$/templates/soup_ingredient.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -313,7 +305,14 @@
       <option name="project" value="LOCAL" />
       <updated>1511350616553</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="gjh">
+      <created>1511371988486</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1511371988486</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
