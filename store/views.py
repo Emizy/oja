@@ -330,6 +330,49 @@ def add_product(request):
     context = {'msg': "New Product Added Successfully", }
     return render(request, template, context)
 
+def change(request):
+    if request.method == 'GET':
+        edit = Product.objects.all()
+        context = {'edits': edit}
+        templates = "change.html"
+        return render(request, templates, context)
+
+
+
+def edit(request, edit_id):
+    if request.method == 'GET':
+        print('am here')
+        show = Product.objects.filter(id=edit_id)
+        content = {'showprod': show, }
+        templates = 'edit.html'
+        return render(request, templates, content)
+    elif request.method == 'POST' and request.FILES['image']:
+        if request.POST.get('category') == "":
+            product = Product.objects.get(id=edit_id)
+            product.price = request.POST.get('price')
+            product.product_name = request.POST.get('product_name')
+            product.section = request.POST.get('section')
+            product.supplier = request.POST.get('supplier')
+            product.image = request.FILES['image']
+            product.save()
+        elif request.POST.get('category') == request.POST.get('category'):
+            product = Product.objects.get(id=edit_id)
+            product.price = request.POST.get('price')
+            product.product_name = request.POST.get('product_name')
+            product.category = request.POST.get('category')
+            product.supplier = request.POST.get('supplier')
+            product.image = request.FILES['image']
+            product.save()
+        context = {'msg': "Product Successfully Changed", }
+        return redirect('/change/', context)
+
+def prod_del(request,del_id):
+    if request.method == 'GET':
+        rst = Product.objects.get(id=del_id)
+        rst.delete()
+        context = {'msg': "Product Succesfully deleted"}
+        return redirect('/change/',context)
+
 
 def comment(request):
     if request.method == 'GET':
