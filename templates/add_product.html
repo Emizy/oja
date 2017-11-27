@@ -18,6 +18,11 @@
             alert("New Product Added Successfully");
         </script>
     {% endif %}
+
+    <div class="w3-bar w3-orange w3-border w3-border-white w3-round">
+        <div class="w3-bar-item" style="text-align: center;color:white;">ADD PRODUCTS</div>
+    </div>
+
     <form class="form" method="post" action="#" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="form-group">
