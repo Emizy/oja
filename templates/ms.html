@@ -420,31 +420,35 @@
 <div class="container">
     <div class="container" style="padding-top: 50px;padding-bottom: 20px;">
         <div class="row" style="border-radius: 25px;">
-            <div class="col-md-3 w3-round">
-                <div class="w3-bar-block w3-orange">
-                    <div class="w3-bar-item w3-border w3-border-white"><a href="{% url 'show_order' %}" style="background-color: orange;"><p
-                            style="color: white;font-size: 1.5em;font-family: 'Bodoni MT'"><span
-                            class="glyphicon glyphicon-check"></span> SHOW ORDER </p></a></div>
-
-                    <div class="w3-bar-item w3-border w3-border-white">
+            <div class="col-md-3 w3-round w3-orange">
+                <ul class="list-group"
+                    style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); ">
+                    <ol class="list-group-item w3-border w3-border-white ">
+                        <a href="{% url 'show_order' %}"><p
+                                style="color: white;font-size: 1.5em;font-family: 'Bodoni MT'"><span
+                                class="glyphicon glyphicon-check"></span> SHOW ORDER </p></a>
+                    </ol>
+                    <ol class="list-group-item w3-border w3-border-white">
                         <a href="{% url 'add_product' %}"><p
                                 style="color: white;font-size: 1.5em;font-family: 'Bodoni MT'"><span
-                                class="glyphicon glyphicon-check"></span>ADD PRODUCTS </p></a></div>
-
-                    <div class="w3-bar-item w3-border w3-border-white"><a href="{% url 'change' %}"><p
-                            style="color: white;font-size: 1.5em;font-family: 'Bodoni MT'"><span
-                            class="glyphicon glyphicon-check"></span>EDIT | DELETE</p></a></div>
-
-                    <div class="w3-bar-item w3-border w3-border-white"><a href="#"><p
-                            style="color: white;font-size: 1.5em !important;font-family: 'Bodoni MT'"><span
-                            class="glyphicon glyphicon-check"></span>INCOME ANALYSIS</p></a></div>
-
-                    <div class="w3-bar-item w3-border w3-border-white"><a href="{% url 'comment' %}"><p
-                            style="color: white;font-size: 1.5em;font-family: 'Bodoni MT'"><span
-                            class="glyphicon glyphicon-comment"></span>COMMENTS</p></a></div>
-
-                </div>
-            </div>
+                                class="glyphicon glyphicon-check"></span>ADD PRODUCTS </p></a>
+                    </ol>
+                    <ol class="list-group-item w3-border w3-border-white">
+                        <a href="{% url 'change' %}"><p
+                                style="color: white;font-size: 1.5em;font-family: 'Bodoni MT'"><span
+                                class="glyphicon glyphicon-check"></span>EDIT | DELETE</p></a>
+                    </ol>
+                    <ol class="list-group-item w3-border w3-border-white">
+                        <a href="#"><p
+                                style="color: white;font-size: 1.5em;font-family: 'Bodoni MT'"><span
+                                class="glyphicon glyphicon-check"></span>INCOME ANALYSIS</p></a>
+                    </ol>
+                    <ol class="list-group-item w3-border w3-border-white">
+                        <a href="{% url 'comment' %}"><p
+                                style="color: white;font-size: 1.5em;font-family: 'Bodoni MT'"><span
+                                class="glyphicon glyphicon-comment"></span>Comments</p></a>
+                    </ol>
+                </ul>
             </div>
             <div class="col-md-9" style="padding-right: 0px !important;
 padding-left: 0px !important;">
