@@ -33,6 +33,7 @@ urlpatterns = [
                   url(r'^add_product/', views.add_product, name="add_product"),
                   url(r'^show_order/', views.show_order, name="show_order"),
                   url(r'^change/', views.change, name="change"),
+                  url(r'^search/', views.search, name="search"),
                   url(r'^edit/(?P<edit_id>[0-9]+)/$', views.edit, name='edit'),
                   url(r'^prod_del/(?P<del_id>[0-9]+)/$', views.prod_del, name='prod_del'),
                   url(r'^comment/', views.comment, name="comment"),
