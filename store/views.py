@@ -429,3 +429,18 @@ def Adminlogout(request):
         del request.session['userid']
         del request.session['username']
         return redirect('/Adminlog/')
+
+
+def search(request):
+    if request.method == 'POST':
+        sh = request.POST.get('seach')
+        slo = Product.objects.filter(product_name__icontains=sh)
+        if slo:
+            context = {'sch': slo}
+            templates = 'search.html'
+            return render(request, templates, context)
+        else:
+            context = {'nosch': "No such entry, Check another Products."}
+            templates = 'search.html'
+            return render(request, templates, context)
+

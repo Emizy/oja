@@ -42,30 +42,40 @@
             border-radius: 8px;
         }
     </style>
+
     <div class="container">
-    <h2>Quick Links</h2>
-    <div class="row">
-        <div class="col-md-5 offset-1">
-            <div class="dropdown">
-                <button class="btn btn-primary dropdown-toggle NAVIGATE" id="menu1" type="button"
-                        data-toggle="dropdown" style="background-color: white; color:black"> Links
-                    <span class="caret"></span></button>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="/shop/provisions/">Provisions</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="/shop/snacks/">Snacks | Drinks</a>
-                    </li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="/shop/cooked_food/">Cooked Food</a>
-                    </li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="/shop/raw_food/">Raw Food</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="/shop/soup_ingredient/">Soup
-                        Ingredient</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="/wear/Men/">Men Wears</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="/wear/Women/">Ladies Wear</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="/wear/Children/">Children</a></li>
-                </ul>
+        <h2>Quick Links</h2>
+        <div class="w3-row">
+            <div class="w3-col m3" style="width:30%">
+                <div class="w3-dropdown-click">
+                    <button onclick="myFunction()" class="w3-button w3-text-white w3-orange"
+                            style="background-color: orange;color:white;">Links <i class="fa fa-arrow-circle-down"
+                                                                                   style="color: white;"
+                                                                                   aria-hidden="true"></i></button>
+                    <div id="Demo" class="w3-dropdown-content w3-bar-block w3-border" style="z-index: 244">
+                        <a href="/shop/provisions/" class="w3-bar-item w3-button">Provisions</a>
+                        <a href="/shop/snacks/" class="w3-bar-item w3-button">Snacks | Drinks</a>
+                        <a href="/shop/cooked_food/" class="w3-bar-item w3-button">Cookwd Food</a>
+                        <a href="/shop/raw_food/" class="w3-bar-item w3-button">Raw Food</a>
+                        <a href="/shop/soup_ingredient/" class="w3-bar-item w3-button">Soup Ingredient</a>
+                        <a href="/shop/Men/" class="w3-bar-item w3-button">Men Wears</a>
+                        <a href="/shop/Women/" class="w3-bar-item w3-button">Women Wears</a>
+                        <a href="/shop/Children/" class="w3-bar-item w3-button">Children Wears</a>
+                    </div>
+                </div>
+
+                <script>
+                    function myFunction() {
+                        var x = document.getElementById("Demo");
+                        if (x.className.indexOf("w3-show") == -1) {
+                            x.className += " w3-show";
+                        } else {
+                            x.className = x.className.replace(" w3-show", "");
+                        }
+                    }
+                </script>
             </div>
         </div>
-    </div>
     </div>
     <br>
     <br>
@@ -189,7 +199,21 @@
     <!--end of Wears-->
 
 
+    <br>
+    <br>
 
+    <div class="container w3-center">
+        <form class="form-inline" method="post" action="/search/">
+            {% csrf_token %}
+            <div class="form-group">
+                <input type="text" class="form-control" name="seach" placeholder="Enter Product name">
+            </div>
+            <button type="submit" class="btn btn-default">Search</button>
+        </form>
+    </div>
+
+    <br>
+    <br>
 
 
 {% endblock %}
