@@ -90,13 +90,23 @@ class Product(models.Model):
 #     def __str__(self):
 #         return "%s - %s" % (self.category, self.product_name)
 
+class Location(models.Model):
+    name = models.CharField(max_length=100)
+    charge = models.IntegerField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return "%s - %s" % (self.name, self.charge)
+
 
 class Order(models.Model):
     Name = models.CharField(max_length=90)
     Email = models.EmailField(null=True, blank=True, max_length=254)
     Phone = models.CharField(max_length=11)
     address = models.TextField(blank=True)
-    loc = models.CharField(max_length=20)
+    loc = models.CharField(max_length=100)
+    del_charge = models.IntegerField()
+    total = models.IntegerField()
     date = models.DateTimeField(auto_now_add=True)
     sumtotal = models.IntegerField()
     confirm = models.BooleanField(default=False)
@@ -107,8 +117,8 @@ class Order(models.Model):
 
 
 class OrderingDetails(models.Model):
-    item = models.ForeignKey(Product, on_delete=models.CASCADE)
-    order = models.ForeignKey(Order, on_delete=models.CASCADE)
+    item = models.ForeignKey(Product, on_delete=models.DO_NOTHING)
+    order = models.ForeignKey(Order, on_delete=models.DO_NOTHING)
     qty = models.IntegerField()
     total = models.IntegerField()
     created_at = models.DateTimeField(auto_now_add=True)

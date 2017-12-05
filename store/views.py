@@ -228,8 +228,13 @@ def checkout(request):
         order.Email = request.POST.get('Email')
         order.Phone = request.POST.get('Phone')
         order.address = request.POST.get('address')
-        order.loc = request.POST.get('loc')
-        order.sumtotal = int(request.session['grandtotal'])
+        raw_loc = request.POST.get('loc')
+        loc_id = raw_loc.split(":")[0]
+        location = Location.objects.get(id=loc_id)
+        order.loc = location.name
+        order.del_charge = location.charge
+        order.total = int(request.session['grandtotal'])
+        order.sumtotal = int(request.session['grandtotal']) + location.charge
         order.save()
         cart_items = request.session['cart']
         for key, value in cart_items.items():

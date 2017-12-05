@@ -181,8 +181,28 @@
             <input type="text" id="phone" class="form-control" name="Phone" placeholder="081XXXXXXX">
         </div>
 
-         <div class="form-group"><label for="phone">State</label>
-            <input type="text" id="phone" class="form-control" name="loc" placeholder="Enter your state">
+        <script>
+            function addCharge(value, total){
+                if (value !== "" && value !== null) {
+                    var arr = value.split(":");
+                    if (arr[1] !== "" && arr[1] !== null) {
+                        document.getElementById("del_charge").innerHTML = arr[1];
+                        document.getElementById("tot_charge").innerHTML = (parseInt(total) + parseInt(arr[1])).toString();
+                    }
+                }
+                else{
+                    document.getElementById("del_charge").innerHTML = "";
+                    document.getElementById("tot_charge").innerHTML = total;
+                }
+            }
+        </script>
+        <div class="form-group"><label for="phone">Location</label>
+            <select name="loc" required onchange="addCharge(this.value, '{{ request.session.grandtotal }}');">
+                <option value="">- Select Location -</option>
+                {% for i in locs %}
+                    <option value="{{ i.id }}:{{ i.charge }}">{{ i.name }}</option>
+                {% endfor %}
+            </select>
         </div>
 
         <div class="form-group">
@@ -191,9 +211,11 @@
                       placeholder="Enter your Address"></textarea>
         </div>
         <div class="container">
-            <p id="t" style="font-size: 20px; !important; font-style: normal;">Delivery fee: 200</p>
+            <p id="t" style="font-size: 20px; !important; font-style: normal;">Delivery fee: <span id="del_charge"></span></p>
             <p id="t" style="font-size: 20px; !important; font-style: normal;">
                 Total: {{ request.session.grandtotal }}</p>
+            <p id="t" style="font-size: 20px; !important; font-style: normal;">
+                Sum Total: <span id="tot_charge">{{ request.session.grandtotal }}</span></p>
 
         </div>
         <div class="container" style="left: 20%;">
@@ -223,29 +245,37 @@
 <div class="footer" style="overflow-x: hidden;">
     <div class="container">
         <div class="col-md-4 footer-grid">
-            <h3>About Us</h3>
-            <p></p>
+            <h3> Hotlines </h3>
+            <ul>
+                <li><a href="#">Eunice : 08100828813 </a></li>
+                <li><a href="#">Rajah : 07060569963 </a></li>
+                <li><a href="#">Emizy : 08139572244 </a></li>
+
+            </ul>
+            <ul>
+                <li><a href="http://aauaforum.com/dev.php"> Meet Developers </a></li>
+            </ul>
         </div>
         <div class="col-md-4 footer-grid ">
             <h3>Other portal</h3>
             <ul>
-                <li><a href="shipping.html">AAUAFORUM</a></li>
-                <li><a href="terms.html">ALUTA-PORTAL</a></li>
-                <li><a href="faqs.html">ARTICLES-PORTAL</a></li>
+                <li><a href="#">AAUAFORUM</a></li>
+                <li><a href="#">ALUTA-PORTAL</a></li>
+                <li><a href="#">ARTICLES-PORTAL</a></li>
             </ul>
         </div>
         <div class="col-md-4 footer-grid">
             <h3>Social Media</h3>
             <ul>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="register.html">Register</a></li>
-                <li><a href="wishlist.html">Wishlist</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
 
             </ul>
         </div>
         <div class="footer-bottom">
             <div class="copy-right">
-                <p> &copy; 2017 FoodStore. All Rights Reserved | Design by <a href=#">
+                <p> &copy; 2017 Oja. All Rights Reserved | Design by <a href=#">
                     EMIZY</a></p>
             </div>
         </div>
