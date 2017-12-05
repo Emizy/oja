@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="be319153-ff38-424e-bed7-8b1ba06195d7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/checkout.html" afterPath="$PROJECT_DIR$/templates/checkout.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,9 +51,11 @@
       <file leaf-file-name="checkout.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/checkout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="182" column="0" lean-forward="true" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="-612">
+              <caret line="129" column="24" lean-forward="true" selection-start-line="129" selection-start-column="24" selection-end-line="129" selection-end-column="24" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -131,9 +134,9 @@
         <option value="$PROJECT_DIR$/oja/urls.py" />
         <option value="$PROJECT_DIR$/templates/mastertemplate.html" />
         <option value="$PROJECT_DIR$/templates/index.html" />
-        <option value="$PROJECT_DIR$/templates/checkout.html" />
         <option value="$PROJECT_DIR$/store/views.py" />
         <option value="$PROJECT_DIR$/store/models.py" />
+        <option value="$PROJECT_DIR$/templates/checkout.html" />
       </list>
     </option>
   </component>
@@ -478,7 +481,14 @@
       <option name="project" value="LOCAL" />
       <updated>1512485495956</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="gjh">
+      <created>1512487166905</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1512487166905</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -949,9 +959,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/checkout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="182" column="0" lean-forward="true" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="-612">
+          <caret line="129" column="24" lean-forward="true" selection-start-line="129" selection-start-column="24" selection-end-line="129" selection-end-column="24" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
