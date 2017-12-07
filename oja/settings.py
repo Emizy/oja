@@ -84,6 +84,12 @@ DATABASES = {
         'PASSWORD': 'joseph2012',
         'HOST': 'Madonna.mysql.pythonanywhere-services.com'
     }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'oja',
+    #     'USER': 'NevoGold',
+    #     'PASSWORD': 'ayo2012',
+    # }
 }
 
 
