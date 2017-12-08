@@ -2,26 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be319153-ff38-424e-bed7-8b1ba06195d7" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/store/migrations/0001_initial.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/store/migrations/0002_auto_20171108_1255.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oja/settings.py" afterPath="$PROJECT_DIR$/oja/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oja/urls.py" afterPath="$PROJECT_DIR$/oja/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/store/admin.py" afterPath="$PROJECT_DIR$/store/admin.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/store/models.py" afterPath="$PROJECT_DIR$/store/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/store/views.py" afterPath="$PROJECT_DIR$/store/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Children.html" afterPath="$PROJECT_DIR$/templates/Children.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Men.html" afterPath="$PROJECT_DIR$/templates/Men.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Women.html" afterPath="$PROJECT_DIR$/templates/Women.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/checkout.html" afterPath="$PROJECT_DIR$/templates/checkout.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/cooked_food.html" afterPath="$PROJECT_DIR$/templates/cooked_food.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/food.html" afterPath="$PROJECT_DIR$/templates/food.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/mastertemplate.html" afterPath="$PROJECT_DIR$/templates/mastertemplate.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/provisions.html" afterPath="$PROJECT_DIR$/templates/provisions.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/raw_food.html" afterPath="$PROJECT_DIR$/templates/raw_food.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/snacks.html" afterPath="$PROJECT_DIR$/templates/snacks.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/soup_ingredient.html" afterPath="$PROJECT_DIR$/templates/soup_ingredient.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,7 +22,7 @@
         <entry file="file://$PROJECT_DIR$/store/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="322">
-              <caret line="463" column="0" lean-forward="true" selection-start-line="463" selection-start-column="0" selection-end-line="463" selection-end-column="0" />
+              <caret line="463" column="0" lean-forward="false" selection-start-line="463" selection-start-column="0" selection-end-line="463" selection-end-column="0" />
               <folding>
                 <element signature="e#320#773#0" expanded="false" />
                 <element signature="e#802#1448#0" expanded="false" />
@@ -99,13 +81,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/oja/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="74" column="0" lean-forward="true" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+            <state relative-caret-position="1241">
+              <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
               <folding>
                 <marker date="1512696776673" expanded="true" signature="2488:2555" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/store/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-18">
+              <caret line="0" column="14" lean-forward="false" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
+              <folding>
+                <element signature="e#106#302#0" expanded="false" />
+                <element signature="e#338#1217#0" expanded="false" />
+                <element signature="e#1254#1461#0" expanded="false" />
+                <element signature="e#1493#2048#0" expanded="false" />
+                <element signature="e#2082#2664#0" expanded="false" />
+                <element signature="e#2708#3267#0" expanded="false" />
+                <element signature="e#3304#3568#0" expanded="false" />
+                <element signature="e#3630#3734#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -197,7 +198,6 @@
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/templates/Men.html" />
         <option value="$PROJECT_DIR$/templates/checkout.html" />
-        <option value="$PROJECT_DIR$/store/models.py" />
         <option value="$PROJECT_DIR$/templates/mastertemplate.html" />
         <option value="$PROJECT_DIR$/templates/gas_acc.html" />
         <option value="$PROJECT_DIR$/store/admin.py" />
@@ -207,6 +207,7 @@
         <option value="$PROJECT_DIR$/templates/gas_refill.html" />
         <option value="$PROJECT_DIR$/templates/food.html" />
         <option value="$PROJECT_DIR$/oja/settings.py" />
+        <option value="$PROJECT_DIR$/store/models.py" />
       </list>
     </option>
   </component>
@@ -584,7 +585,14 @@
       <option name="project" value="LOCAL" />
       <updated>1512645890025</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="first">
+      <created>1512696859697</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1512696859697</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -938,22 +946,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/store/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="59" column="15" lean-forward="false" selection-start-line="59" selection-start-column="4" selection-end-line="59" selection-end-column="15" />
-          <folding>
-            <element signature="e#128#324#0" expanded="false" />
-            <element signature="e#360#1239#0" expanded="false" />
-            <element signature="e#1276#1483#0" expanded="false" />
-            <element signature="e#2104#2686#0" expanded="false" />
-            <element signature="e#2730#3289#0" expanded="false" />
-            <element signature="e#3326#3590#0" expanded="false" />
-            <element signature="e#3652#3756#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/mastertemplate.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
@@ -1000,7 +992,7 @@
     <entry file="file://$PROJECT_DIR$/store/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
-          <caret line="463" column="0" lean-forward="true" selection-start-line="463" selection-start-column="0" selection-end-line="463" selection-end-column="0" />
+          <caret line="463" column="0" lean-forward="false" selection-start-line="463" selection-start-column="0" selection-end-line="463" selection-end-column="0" />
           <folding>
             <element signature="e#320#773#0" expanded="false" />
             <element signature="e#802#1448#0" expanded="false" />
@@ -1064,10 +1056,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/oja/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="74" column="0" lean-forward="true" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+        <state relative-caret-position="1241">
+          <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
           <folding>
             <marker date="1512696776673" expanded="true" signature="2488:2555" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/store/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-18">
+          <caret line="0" column="14" lean-forward="false" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
+          <folding>
+            <element signature="e#106#302#0" expanded="false" />
+            <element signature="e#338#1217#0" expanded="false" />
+            <element signature="e#1254#1461#0" expanded="false" />
+            <element signature="e#1493#2048#0" expanded="false" />
+            <element signature="e#2082#2664#0" expanded="false" />
+            <element signature="e#2708#3267#0" expanded="false" />
+            <element signature="e#3304#3568#0" expanded="false" />
+            <element signature="e#3630#3734#0" expanded="false" />
           </folding>
         </state>
       </provider>
