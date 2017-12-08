@@ -33,7 +33,11 @@
                                 <h5 id="t" style="width: 110px;margin-left: 20px;">{{ i.product_name }} </h5>
                                 <h6 id="t" style="width: 110px;margin-left: 20px;">{{ i.supplier }}</h6>
                             </div>
-                            <h5 id="t">#{{ i.price }} </h5>
+                            <div class="row">
+                                    <h5 id="t" style="width: 110px;margin-left: 20px;">{{ i.product_name }} </h5>
+                                    <h6 id="t" style="width: 110px;margin-left: 20px;">{{ i.supplier }}</h6>
+                                </div>
+                                <h5 id="t">#{{ i.price }} </h5>
                             <div class="row">
                                 <div>
                                     <div id="{{ i.id }}_csrf_holder">
@@ -48,7 +52,7 @@
                                     </script>
                                     <button id="{{ i.id }}" type="button" class="btn btn-circle w3-btn"
                                             style="background-color: orange; color: black;"
-                                            onclick="add_to_cart(this.id, csrf, 'provision');">
+                                            onclick="add_to_cart(this.id, csrf, 'product');">
                                         <i class="glyphicon glyphicon-shopping-cart" style="color:white;"></i></button>
                                 </div>
                             </div>

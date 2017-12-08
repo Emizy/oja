@@ -182,7 +182,7 @@
         </div>
 
         <script>
-            function addCharge(value, total){
+            function addCharge(value, total) {
                 if (value !== "" && value !== null) {
                     var arr = value.split(":");
                     if (arr[1] !== "" && arr[1] !== null) {
@@ -190,7 +190,7 @@
                         document.getElementById("tot_charge").innerHTML = (parseInt(total) + parseInt(arr[1])).toString();
                     }
                 }
-                else{
+                else {
                     document.getElementById("del_charge").innerHTML = "";
                     document.getElementById("tot_charge").innerHTML = total;
                 }
@@ -211,7 +211,8 @@
                       placeholder="Enter your Address"></textarea>
         </div>
         <div class="container">
-            <p id="t" style="font-size: 20px; !important; font-style: normal;">Delivery fee: <span id="del_charge"></span></p>
+            <p id="t" style="font-size: 20px; !important; font-style: normal;">Delivery fee: <span
+                    id="del_charge"></span></p>
             <p id="t" style="font-size: 20px; !important; font-style: normal;">
                 Total: {{ request.session.grandtotal }}</p>
             <p id="t" style="font-size: 20px; !important; font-style: normal;">
@@ -225,12 +226,19 @@
             <script>
                 var div = document.getElementById("{{ i.id }}_csrf_holder");
                 var csrf = div.getElementsByTagName('input')[0].value;             </script>
-
-            <button type="button" style="margin-top: 1%;margin-left: 0%; background-color: orange !important;"
-                    class="w3-btn w3-round-small w3-large w3-green"
-                    onclick="paystack('{{ request.session.grandtotal }}',csrf);">
+            <div class="w3-center">
+                <div class="w3-bar">
+                    <button type="button" style="margin-top: 1%;margin-left: 0%; background-color: orange !important;"
+                    class="w3-button w3-hover-orange w3-text-white w3-border w3-border-orange"
+                    onclick="paystack('{{ request.session.grandtotal }}',csrf);"><i class="fa fa-credit-card"
+                                                                                    aria-hidden="true"></i>
                 Pay
             </button>
+                    <button href="#" class="w3-button w3-hover-orange w3-text-orange w3-hover-text-white w3-border w3-border-orange">Pay on-delivery <i
+                    class="fa fa-credit-card" aria-hidden="true"></i> </button>
+                </div>
+            </div>
+
         </div>
     </form>
 </div>

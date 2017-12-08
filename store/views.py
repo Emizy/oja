@@ -3,8 +3,8 @@ import traceback
 from django.conf import settings
 from django.contrib import messages
 from django.core.mail import send_mail
-from django.http import HttpRequest, JsonResponse
-from django.shortcuts import render, redirect
+from django.http import HttpRequest, JsonResponse, HttpResponse
+from django.shortcuts import render, redirect, render_to_response
 from store.models import *
 
 
@@ -161,7 +161,6 @@ def cart(request, url_name):
                         "details": "Cart cleared"}
             return JsonResponse(response, safe=False)
         elif url_name == 'remove':
-            print('Im here')
             form = json.loads(request.body.decode(encoding='UTF-8'))
             itemid = form['id']
             cart_items = dict(request.session['cart'])
@@ -178,12 +177,13 @@ def cart(request, url_name):
             print('hey')
             form = json.loads(request.body.decode(encoding='UTF-8'))
             if form:
-                # category = form['category']
+                category = form['category']
                 quantity = int(form['quantity'])
-
-                # if category == 'provisions':
                 try:
-                    item = Product.objects.get(id=form['id'])
+                    if category == 'product':
+                        item = Product.objects.get(id=form['id'])
+                    elif category == 'gas':
+                        item = Gas.objects.get(id=form['id'])
                 except:
                     item = None
 
@@ -198,6 +198,7 @@ def cart(request, url_name):
                             'Total': item.price * quantity
                         }
                     }
+
                     cart_items.update(data)
                     total = 0
                     for order_detail in cart_items.keys():
@@ -219,9 +220,10 @@ def cart(request, url_name):
 
 def checkout(request):
     if request.method == "GET":
-        request.session['grandtotal'] = int(request.session['total']) + 200
+        request.session['grandtotal'] = int(request.session['total'])
         template = 'checkout.html'
-        return render(request, template)
+        locs = Location.objects.all()
+        return render(request, template, {"locs": locs})
     elif request.method == "POST":
         order = Order()
         order.Name = request.POST.get('Name')
@@ -242,6 +244,7 @@ def checkout(request):
             order_detail = OrderingDetails()
             order_detail.order = order
             order_detail.item = product
+            order_detail.item1 = gas
             order_detail.qty = int(value['Quantity'])
             order_detail.total = int(value['Total'])
             order_detail.save()
@@ -335,13 +338,13 @@ def add_product(request):
     context = {'msg': "New Product Added Successfully", }
     return render(request, template, context)
 
+
 def change(request):
     if request.method == 'GET':
         edit = Product.objects.all()
         context = {'edits': edit}
         templates = "change.html"
         return render(request, templates, context)
-
 
 
 def edit(request, edit_id):
@@ -371,12 +374,13 @@ def edit(request, edit_id):
         context = {'msg': "Product Successfully Changed", }
         return redirect('/change/', context)
 
-def prod_del(request,del_id):
+
+def prod_del(request, del_id):
     if request.method == 'GET':
         rst = Product.objects.get(id=del_id)
         rst.delete()
         context = {'msg': "Product Succesfully deleted"}
-        return redirect('/change/',context)
+        return redirect('/change/', context)
 
 
 def comment(request):
@@ -390,7 +394,7 @@ def comment(request):
 def Adminreg(request):
     if request.method == 'GET':
         context = locals()
-        templates = "Adminreg.html"
+        templates = "adminreg.html"
         return render(request, templates, context)
     elif request.method == 'POST':
         admin = adminreg()
@@ -398,7 +402,7 @@ def Adminreg(request):
         admin.Password = request.POST.get('Password')
         admin.save()
         context = {'successmsg': "Registration successfull Continue to login", 'user': request.POST.get('Username'), }
-        templates = 'Adminreg.html'
+        templates = 'adminreg.html'
         return render(request, templates, context)
 
 
@@ -438,10 +442,19 @@ def Adminlogout(request):
 
 def search(request):
     if request.method == 'POST':
+        # fil = ProductFilter(request.GET, queryset=Product.objects.all())
+        # if fil:
+        #     templates = 'search.html'
+        #     context = {'filter': fil}
+        # else:
+        #     templates = 'search.html'
+        #     context = {'nosch': "No such entry, Check another Products."}
+        # return HttpResponse(request, templates, context)
         sh = request.POST.get('seach')
         slo = Product.objects.filter(product_name__icontains=sh)
         if slo:
             context = {'sch': slo}
+            print('am fucking heree')
             templates = 'search.html'
             return render(request, templates, context)
         else:
@@ -449,3 +462,28 @@ def search(request):
             templates = 'search.html'
             return render(request, templates, context)
 
+
+def gas_repair(request):
+    if request.method == 'GET':
+        context = locals()
+        templates = 'gas_repair.html'
+        return render(request,templates,context)
+
+def p(request, url_name):
+    if request.method == 'GET':
+        if 'cart' not in request.session.keys():
+            request.session['cart'] = {}
+        print(request.session['cart'])
+        if url_name == "gas_refill":
+            cate = "gas_refill"
+        elif url_name == "gas_acc":
+            cate = "gas_acc"
+        sql = Gas.objects.filter(Accessories=cate)
+        if sql:
+            context = {'sql1': sql, }
+            template = url_name + '.html'
+            return render(request, template, context)
+        else:
+            context = {'msg': "No stock available", }
+            template = url_name + '.html'
+            return render(request, template, context)

@@ -1,5 +1,5 @@
 import hashlib
-
+import django_filters
 from django.db import models
 
 
@@ -41,55 +41,6 @@ class Product(models.Model):
         return "%s - %s" % (self.category, self.product_name)
 
 
-# class Wears(models.Model):
-#     price = models.IntegerField()
-#     product_name = models.CharField(max_length=300)
-#     types = (
-#         ('Men', 'Men'),
-#         ('Women', 'Women'),
-#         ('Children', 'Children'),
-#     )
-#     category = models.CharField(choices=types, max_length=20)
-#     image = models.FileField(null=True, blank=True)
-#     supplier = models.CharField(max_length=200)
-#     date = models.DateTimeField(auto_now_add=True)
-#
-#     def __str__(self):
-#         return "%s - %s" % (self.category, self.product_name)
-
-
-# class School(models.Model):
-#     price = models.IntegerField()
-#     product_name = models.CharField(max_length=300)
-#     types = (
-#         ('Books', 'Books'),
-#         ('Bag', 'Bag'),
-#         ('Shoes', 'Shoes'),
-#     )
-#     category = models.CharField(choices=types, max_length=20)
-#     image = models.FileField(null=True, blank=True)
-#     supplier = models.CharField(max_length=200)
-#     date = models.DateTimeField(auto_now_add=True)
-#
-#     def __str__(self):
-#         return "%s - %s" % (self.category, self.product_name)
-
-
-# class Equip(models.Model):
-#     price = models.IntegerField()
-#     product_name = models.CharField(max_length=300)
-#     types = (
-#         ('plates', 'plates'),
-#         ('cooker', 'cooker'),
-#     )
-#     category = models.CharField(choices=types, max_length=20)
-#     image = models.FileField(null=True, blank=True)
-#     supplier = models.CharField(max_length=200)
-#     date = models.DateTimeField(auto_now_add=True)
-#
-#     def __str__(self):
-#         return "%s - %s" % (self.category, self.product_name)
-
 class Location(models.Model):
     name = models.CharField(max_length=100)
     charge = models.IntegerField()
@@ -99,6 +50,25 @@ class Location(models.Model):
         return "%s - %s" % (self.name, self.charge)
 
 
+class Gas(models.Model):
+    price = models.IntegerField()
+    product_name = models.CharField(max_length=300)
+    types = (
+        ('gas_acc', 'gas_acc'),
+        ('gas_refill', 'gas_refill'),
+    )
+    Accessories = models.CharField(choices=types, max_length=20, blank=True, null=True)
+    image = models.FileField(null=True, blank=True)
+    supplier = models.CharField(max_length=200)
+    date = models.DateTimeField(auto_now_add=True)
+
+    # class Meta:
+    #     verbose_name_plural = "Products"
+
+    def __str__(self):
+        return "%s - %s" % (self.product_name, self.price)
+
+
 class Order(models.Model):
     Name = models.CharField(max_length=90)
     Email = models.EmailField(null=True, blank=True, max_length=254)
@@ -106,18 +76,19 @@ class Order(models.Model):
     address = models.TextField(blank=True)
     loc = models.CharField(max_length=100)
     del_charge = models.IntegerField()
-    total = models.IntegerField()
     date = models.DateTimeField(auto_now_add=True)
+    total = models.IntegerField()
     sumtotal = models.IntegerField()
     confirm = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return "%s - %s - %s" % (self.Name, self.sumtotal)
+        return "%s - %s" % (self.Name, self.sumtotal)
 
 
 class OrderingDetails(models.Model):
-    item = models.ForeignKey(Product, on_delete=models.DO_NOTHING)
+    item = models.ForeignKey(Product, on_delete=models.DO_NOTHING,blank=True,null=True)
+    item1 = models.ForeignKey(Gas, on_delete=models.DO_NOTHING,blank=True,null=True)
     order = models.ForeignKey(Order, on_delete=models.DO_NOTHING)
     qty = models.IntegerField()
     total = models.IntegerField()
@@ -144,6 +115,3 @@ def createHash(value):
     hash = hashlib.sha256()
     hash.update(str(value).encode(encoding='UTF-8'))
     return hash.hexdigest()
-
-
-

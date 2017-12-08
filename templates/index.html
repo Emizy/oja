@@ -44,11 +44,11 @@
     </style>
 
     <div class="container">
-        <h2>Quick Links</h2>
+        <h3>Quick Links</h3>
         <div class="w3-row">
             <div class="w3-col m3" style="width:30%">
                 <div class="w3-dropdown-click">
-                    <button onclick="myFunction()" class="w3-button w3-text-white w3-orange"
+                    <button onclick="myFunction()" class="w3-button w3-hover-orange w3-text-white w3-hover-text-white  w3-round-large w3-border w3-border-orange"
                             style="background-color: orange;color:white;">Links <i class="fa fa-arrow-circle-down"
                                                                                    style="color: white;"
                                                                                    aria-hidden="true"></i></button>
@@ -135,7 +135,7 @@
                                         </script>
                                         <button id="{{ i.id }}" type="button" class="btn btn-circle w3-btn"
                                                 style="background-color: orange; color: black;"
-                                                onclick="add_to_cart(this.id, csrf, 'provision');">
+                                                onclick="add_to_cart(this.id, csrf, 'product');">
                                             <i class="glyphicon glyphicon-shopping-cart" style="color: white;"></i>
                                         </button>
                                     </div>
@@ -183,7 +183,7 @@
                                         </script>
                                         <button id="{{ i.id }}" type="button" class="btn btn-circle w3-btn"
                                                 style="background-color: orange; color: black;"
-                                                onclick="add_to_cart(this.id, csrf, 'provision');">
+                                                onclick="add_to_cart(this.id, csrf, 'product');">
                                             <i class="glyphicon glyphicon-shopping-cart" style="color: white;"></i>
                                         </button>
                                     </div>
