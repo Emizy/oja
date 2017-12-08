@@ -77,19 +77,19 @@ WSGI_APPLICATION = 'oja.wsgi.application'
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'Madonna$oja',
-        'USER': 'Madonna',
-        'PASSWORD': 'joseph2012',
-        'HOST': 'Madonna.mysql.pythonanywhere-services.com'
-    }
     # 'default': {
     #     'ENGINE': 'django.db.backends.mysql',
-    #     'NAME': 'oja',
-    #     'USER': 'NevoGold',
-    #     'PASSWORD': 'ayo2012',
+    #     'NAME': 'Madonna$oja',
+    #     'USER': 'Madonna',
+    #     'PASSWORD': 'joseph2012',
+    #     'HOST': 'Madonna.mysql.pythonanywhere-services.com'
     # }
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'oja',
+        'USER': 'NevoGold',
+        'PASSWORD': 'ayo2012',
+    }
 }
 
 
@@ -130,19 +130,19 @@ USE_TZ = True
 
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 #online setting
-STATIC_URL = '/static/'
-# STATICFILES_DIRS = [os.path.join(BASE_DIR,  'static')
-
-MEDIA_ROOT = os.path.join(BASE_DIR,'media')
-
-MEDIA_URL = '/media/'
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
-
-# offline setting
 # STATIC_URL = '/static/'
-# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
-# TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'templates'),)
+# # STATICFILES_DIRS = [os.path.join(BASE_DIR,  'static')
 #
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 #
 # MEDIA_URL = '/media/'
+# STATIC_ROOT = os.path.join(BASE_DIR, "static")
+
+# offline setting
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
+TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'templates'),)
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+MEDIA_URL = '/media/'
