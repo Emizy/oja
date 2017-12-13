@@ -8,7 +8,7 @@ from django.shortcuts import render, redirect, render_to_response
 from store.models import *
 
 
-def index(request):
+def comingsoon(request):
     if request.method == "GET":
         sql = Product.objects.all().filter(section=None).order_by('-date')[:8]
         sql2 = Product.objects.all().filter(category=None).order_by('-date')[:8]
@@ -21,7 +21,7 @@ def index(request):
         return render(request, templates, content)
 
 
-def comingsoon(request):
+def index(request):
     if request.method == "GET":
         content = locals()
         templates = 'comingsoon.html'
