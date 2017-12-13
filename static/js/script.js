@@ -41,6 +41,38 @@ function add_to_cart(id, csrf, category) {
     location.reload(true);
 }
 
+function add_to_gcart(id, csrf, category) {
+    var method = "POST";
+    var url = window.location.href;
+    var arr = url.split("/");
+    var result = arr[0] + "//" + arr[2];
+    url = result + "/gcart/add/";
+    var inpObj = document.getElementById(id + '_quantity');
+    if (inpObj.checkValidity() === false) {
+        alert('Please enter quantity');
+        inpObj.focus();
+        return;
+    } else {
+        var quantity = inpObj.value
+    }
+    // var quantity = document.getElementById(id + '_quantity').value;
+    var headers = '{' +
+        '"X-CSRFToken":"' + csrf + '",' +
+        '"Content-Type":"application/json"}';
+    var data =
+        '{' +
+        '"id": "' + id + '",' +
+        '"quantity": "' + quantity + '",' +
+        '"category": "' + category + '"' +
+        '}';
+    var response = call_api(method, url, headers, data);
+    console.log(response);
+    if (response['response'] = !'Success') {
+        alert(response['details']);
+    }
+    location.reload(true);
+}
+
 function clear_cart(csrf) {
     var method = "POST";
     var url = window.location.href;
@@ -59,6 +91,8 @@ function clear_cart(csrf) {
     }
     location.reload(true);
 }
+
+
 
 function remove_from_cart(id, csrf) {
     var method = "POST";
@@ -80,6 +114,8 @@ function remove_from_cart(id, csrf) {
     }
     location.reload(true);
 }
+
+
 
 function paystack(amount, csrf) {
     var date = new Date();
@@ -139,7 +175,7 @@ function paystack(amount, csrf) {
     var handler = PaystackPop.setup({
         key: 'pk_test_e3fc790b33042081a09723fb112c5c4fbe041baa',
         email: email,
-        amount: amount * 100,
+        amount: parseInt(amount) * 100,
         ref: ref,
         // metadata: {
         //     custom_fields: [

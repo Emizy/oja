@@ -21,6 +21,13 @@ def index(request):
         return render(request, templates, content)
 
 
+def comingsoon(request):
+    if request.method == "GET":
+        content = locals()
+        templates = 'comingsoon.html'
+        return render(request, templates, content)
+
+
 def contact(request):
     if request.method == "POST":
         con = Contact()
@@ -180,10 +187,7 @@ def cart(request, url_name):
                 category = form['category']
                 quantity = int(form['quantity'])
                 try:
-                    if category == 'product':
-                        item = Product.objects.get(id=form['id'])
-                    elif category == 'gas':
-                        item = Gas.objects.get(id=form['id'])
+                    item = Product.objects.get(id=form['id'])
                 except:
                     item = None
 
@@ -244,7 +248,6 @@ def checkout(request):
             order_detail = OrderingDetails()
             order_detail.order = order
             order_detail.item = product
-            order_detail.item1 = gas
             order_detail.qty = int(value['Quantity'])
             order_detail.total = int(value['Total'])
             order_detail.save()
@@ -462,28 +465,3 @@ def search(request):
             templates = 'search.html'
             return render(request, templates, context)
 
-
-def gas_repair(request):
-    if request.method == 'GET':
-        context = locals()
-        templates = 'gas_repair.html'
-        return render(request,templates,context)
-
-def p(request, url_name):
-    if request.method == 'GET':
-        if 'cart' not in request.session.keys():
-            request.session['cart'] = {}
-        print(request.session['cart'])
-        if url_name == "gas_refill":
-            cate = "gas_refill"
-        elif url_name == "gas_acc":
-            cate = "gas_acc"
-        sql = Gas.objects.filter(Accessories=cate)
-        if sql:
-            context = {'sql1': sql, }
-            template = url_name + '.html'
-            return render(request, template, context)
-        else:
-            context = {'msg': "No stock available", }
-            template = url_name + '.html'
-            return render(request, template, context)

@@ -188,6 +188,7 @@
                     if (arr[1] !== "" && arr[1] !== null) {
                         document.getElementById("del_charge").innerHTML = arr[1];
                         document.getElementById("tot_charge").innerHTML = (parseInt(total) + parseInt(arr[1])).toString();
+                        var del = document.getElementById("del_charge").innerHTML = arr[1];
                     }
                 }
                 else {
@@ -225,7 +226,9 @@
             </div>
             <script>
                 var div = document.getElementById("{{ i.id }}_csrf_holder");
-                var csrf = div.getElementsByTagName('input')[0].value;             </script>
+                var csrf = div.getElementsByTagName('input')[0].value;
+                var del = document.getElementById('del_charge').value;
+            </script>
             <div class="w3-center">
                 <div class="w3-bar">
                     <button type="button" style="margin-top: 1%;margin-left: 0%; background-color: orange !important;"
